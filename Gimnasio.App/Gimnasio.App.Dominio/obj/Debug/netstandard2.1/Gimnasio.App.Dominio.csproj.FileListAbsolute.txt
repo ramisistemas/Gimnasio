@@ -1,0 +1,9 @@
+C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Dominio\bin\Debug\netstandard2.1\Gimnasio.App.Dominio.deps.json
+C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Dominio\bin\Debug\netstandard2.1\Gimnasio.App.Dominio.dll
+C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Dominio\bin\Debug\netstandard2.1\Gimnasio.App.Dominio.pdb
+C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Dominio\obj\Debug\netstandard2.1\Gimnasio.App.Dominio.csprojAssemblyReference.cache
+C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Dominio\obj\Debug\netstandard2.1\Gimnasio.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Dominio\obj\Debug\netstandard2.1\Gimnasio.App.Dominio.AssemblyInfo.cs
+C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Dominio\obj\Debug\netstandard2.1\Gimnasio.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Dominio\obj\Debug\netstandard2.1\Gimnasio.App.Dominio.dll
+C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Dominio\obj\Debug\netstandard2.1\Gimnasio.App.Dominio.pdb
