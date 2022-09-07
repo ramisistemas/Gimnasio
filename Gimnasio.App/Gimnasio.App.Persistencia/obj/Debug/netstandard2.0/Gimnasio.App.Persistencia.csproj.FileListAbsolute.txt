@@ -1,4 +1,0 @@
-C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Persistencia\obj\Debug\netstandard2.0\Gimnasio.App.Persistencia.csprojAssemblyReference.cache
-C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Persistencia\obj\Debug\netstandard2.0\Gimnasio.App.Persistencia.AssemblyInfoInputs.cache
-C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Persistencia\obj\Debug\netstandard2.0\Gimnasio.App.Persistencia.AssemblyInfo.cs
-C:\Users\Ramiro\Desktop\Mision Tic\.Net\Gimnasio\Gimnasio.App\Gimnasio.App.Persistencia\obj\Debug\netstandard2.0\Gimnasio.App.Persistencia.csproj.CoreCompileInputs.cache

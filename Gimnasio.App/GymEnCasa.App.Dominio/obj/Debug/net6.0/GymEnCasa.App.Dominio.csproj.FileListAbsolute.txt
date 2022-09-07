@@ -1,0 +1,12 @@
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Dominio\bin\Debug\net6.0\GymEnCasa.App.Dominio.deps.json
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Dominio\bin\Debug\net6.0\GymEnCasa.App.Dominio.dll
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Dominio\bin\Debug\net6.0\GymEnCasa.App.Dominio.pdb
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Dominio\obj\Debug\net6.0\GymEnCasa.App.Dominio.csproj.AssemblyReference.cache
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Dominio\obj\Debug\net6.0\GymEnCasa.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Dominio\obj\Debug\net6.0\GymEnCasa.App.Dominio.AssemblyInfoInputs.cache
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Dominio\obj\Debug\net6.0\GymEnCasa.App.Dominio.AssemblyInfo.cs
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Dominio\obj\Debug\net6.0\GymEnCasa.App.Dominio.csproj.CoreCompileInputs.cache
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Dominio\obj\Debug\net6.0\GymEnCasa.App.Dominio.dll
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Dominio\obj\Debug\net6.0\refint\GymEnCasa.App.Dominio.dll
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Dominio\obj\Debug\net6.0\GymEnCasa.App.Dominio.pdb
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Dominio\obj\Debug\net6.0\ref\GymEnCasa.App.Dominio.dll

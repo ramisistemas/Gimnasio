@@ -1,0 +1,17 @@
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\obj\Debug\net6.0\GymEnCasa.App.Persistencia.csproj.AssemblyReference.cache
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\obj\Debug\net6.0\GymEnCasa.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\obj\Debug\net6.0\GymEnCasa.App.Persistencia.AssemblyInfoInputs.cache
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\obj\Debug\net6.0\GymEnCasa.App.Persistencia.AssemblyInfo.cs
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\obj\Debug\net6.0\GymEnCasa.App.Persistencia.csproj.CoreCompileInputs.cache
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\bin\Debug\net6.0\GymEnCasa.App.Persistencia.deps.json
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\bin\Debug\net6.0\GymEnCasa.App.Persistencia.runtimeconfig.json
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\bin\Debug\net6.0\GymEnCasa.App.Persistencia.dll
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\bin\Debug\net6.0\GymEnCasa.App.Persistencia.pdb
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\bin\Debug\net6.0\GymEnCasa.App.Dominio.dll
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\bin\Debug\net6.0\GymEnCasa.App.Dominio.pdb
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\obj\Debug\net6.0\GymEnCasa.App.Persistencia.csproj.CopyComplete
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\obj\Debug\net6.0\GymEnCasa.App.Persistencia.dll
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\obj\Debug\net6.0\refint\GymEnCasa.App.Persistencia.dll
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\obj\Debug\net6.0\GymEnCasa.App.Persistencia.pdb
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\obj\Debug\net6.0\GymEnCasa.App.Persistencia.genruntimeconfig.cache
+D:\Documentos\Visual Studio 2022\Proyects\Gym\GymEnCasa.App\GymEnCasa.App.Persistencia\obj\Debug\net6.0\ref\GymEnCasa.App.Persistencia.dll
