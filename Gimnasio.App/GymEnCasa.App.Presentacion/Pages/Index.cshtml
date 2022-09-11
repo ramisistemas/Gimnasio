@@ -1,10 +1,26 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "GYM EN CASA";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<header>
+    <h1> LET'S TRAIN </h1>
+</header>
+
+<section class="form-login">
+    <div align="center"><img class="logo" src="~/Img/Inicio/logotipo.jpeg" alt="20"></div>
+    <br><br><br>
+    <input class="login" type="text" name="usuario" id="usuario" placeholder="Ingrese su Usuario">
+    <br><br>
+    <input class="login" type="password" name="contraseña" id="Contraseña" placeholder="Ingrese su Contraseña">
+    <br><br>
+    <form>
+        <a href="../pagprincipal/pagprincipal.html">
+            <input type="button" class="ingresar" onclick='return validar()' value="Ingresar">
+        </a>
+    </form>
+    <label for="">No tienes una cuenta?</label>
+    <a href="registrar.html">Registrarse</a>
+    <div id="error"></div>
+</section>
