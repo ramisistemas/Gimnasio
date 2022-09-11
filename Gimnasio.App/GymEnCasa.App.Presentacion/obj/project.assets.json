@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documentos\\Visual Studio 2022\\Proyects\\Gym\\GymEnCasa.App\\GymEnCasa.App.Servicios\\GymEnCasa.App.Servicios.csproj",
-      "projectName": "GymEnCasa.App.Servicios",
-      "projectPath": "D:\\Documentos\\Visual Studio 2022\\Proyects\\Gym\\GymEnCasa.App\\GymEnCasa.App.Servicios\\GymEnCasa.App.Servicios.csproj",
+      "projectUniqueName": "D:\\Escritorio\\correcciones\\Gimnasio\\Gimnasio.App\\GymEnCasa.App.Presentacion\\GymEnCasa.App.Presentacion.csproj",
+      "projectName": "GymEnCasa.App.Presentacion",
+      "projectPath": "D:\\Escritorio\\correcciones\\Gimnasio\\Gimnasio.App\\GymEnCasa.App.Presentacion\\GymEnCasa.App.Presentacion.csproj",
       "packagesPath": "C:\\Users\\YOR\\.nuget\\packages\\",
-      "outputPath": "D:\\Documentos\\Visual Studio 2022\\Proyects\\Gym\\GymEnCasa.App\\GymEnCasa.App.Servicios\\obj\\",
+      "outputPath": "D:\\Escritorio\\correcciones\\Gimnasio\\Gimnasio.App\\GymEnCasa.App.Presentacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\YOR\\AppData\\Roaming\\NuGet\\NuGet.Config",
