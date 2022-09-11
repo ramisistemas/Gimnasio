@@ -1,13 +1,11 @@
-Gimnasio/Gimnasio.App/GymEnCasa.App.Presentacion/obj/
-Gimnasio/Gimnasio.App/GymEnCasa.App.Presentacion/bin/
-
 Gimnasio.App/GymEnCasa.App.Dominio/bin/Debug/net6.0/
 Gimnasio.App/GymEnCasa.App.Dominio/obj/
+
 Gimnasio.App/GymEnCasa.App.Persistencia/bin/Debug/net6.0/
 Gimnasio.App/GymEnCasa.App.Persistencia/obj/
 
 Gimnasio.App/GymEnCasa.App.Presentacion/bin/Debug/net6.0/
-Gimnasio.App/GymEnCasa.App.Presentacion/obj/
+# Gimnasio.App/GymEnCasa.App.Presentacion/obj/
 
 Gimnasio.App/GymEnCasa.App.Servicios/bin/Debug/net6.0/
 Gimnasio.App/GymEnCasa.App.Servicios/obj/
