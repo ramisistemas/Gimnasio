@@ -1,0 +1,88 @@
+﻿@page
+@model MyApp.Namespace.RegistrarModel
+@{
+    ViewData["Title"] = "REGISTRAR";
+    ViewData["Estilos"] = "~/css/Inicio/registrar.css";
+}
+<div class="fondo">
+
+</div>
+
+<head>
+    @{
+        var Estilos = ViewData["Estilos"];
+    }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LET'S TRAIN</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Inicio/registrar.css">
+
+</head>
+
+<body>
+    <main role="main">
+        <section class="form-registro">
+            <div align="center"><img class="imagen1" src="~/img/Inicio/logotipo.jpeg" alt="20"></div>
+            <h1 style="color:rgb(46, 17, 45);">CREAR UNA CUENTA</h1>
+            <br>
+            <label for="">Primer Nombre:</label>
+            <br>
+            <input class="controls" type="text" name="nombre1" id="nombre1" placeholder="Ingrese su Primer Nombre">
+            <br><br>
+            <label for="">Segundo Nombre:</label>
+            <br>
+            <input class="controls" type="text" name="nombre2" id="nombre2" placeholder="Ingrese su Segundo Nombre">
+            <br><br>
+            <label for="">Primer Apellido:</label>
+            <br>
+            <input class="controls" type="text" name="apellido1" id="apellido1"
+                placeholder="Ingrese su Primer Apellido">
+            <br><br>
+            <label for="">Segundo Apellido:</label>
+            <br>
+            <input class="controls" type="text" name="apellido2" id="apellido2"
+                placeholder="Ingrese su Segundo Apellido">
+            <br><br>
+            <label for="">Correo Electronico:</label>
+            <br>
+            <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su E-mail">
+            <br><br>
+            <label for="">Edad (años):</label>
+            <br>
+            <input class="controls" type="number" name="Edad" id="Edad" placeholder="Ingrese su Edad">
+            <br><br>
+            <label for="">Telefono:</label>
+            <br>
+            <input class="controls" type="number" name="Telefono" id="Telefono" placeholder="Ingrese su Telefono">
+            <br><br>
+            <label for="">Direccion:</label>
+            <br>
+            <input class="controls" type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion">
+            <br><br>
+            <label for="">Usuario:</label>
+            <br>
+            <input class="controls" type="text" name="Usuario" id="Usuario" placeholder="Ingrese su Usuario">
+            <br><br>
+            <label for="">Contraseña:</label>
+            <br>
+            <input class="controls" type="password" name="Contraseña" id="Contraseña"
+                placeholder="Ingrese su Contraseña">
+            <br><br>
+            <p type="checkbox">Estoy de acuerdo con <a href="/Inicio/TerminosyCondiciones">Terminos y Condiciones</a>
+            </p>
+            <br>
+            <input class="button" type="submit" onclick='return validar()' value="Registrar">
+            <input class="button" type="submit" value="Cancelar">
+            <p><a asp-page="/inicio/index"> Ya Tengo Una Cuenta</a></p>
+            <div id="error"></div>
+            <script src="../js/script.js"></script>
+        </section>
+    </main>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Inicio/inicio.js"></script>
+
+</body>

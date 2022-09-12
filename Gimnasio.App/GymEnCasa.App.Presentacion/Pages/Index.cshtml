@@ -1,26 +1,58 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "GYM EN CASA";
+    ViewData["Title"] = "LOGIN";
+    ViewData["Estilos"] = "~/css/Inicio/login.css";
 }
 
-<header>
-    <h1> LET'S TRAIN </h1>
-</header>
+<head>
+    @{
+        var Estilos = ViewData["Estilos"];
+    }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LET'S TRAIN</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Inicio/login.css">
 
-<section class="form-login">
-    <div align="center"><img class="logo" src="~/Img/Inicio/logotipo.jpeg" alt="20"></div>
-    <br><br><br>
-    <input class="login" type="text" name="usuario" id="usuario" placeholder="Ingrese su Usuario">
-    <br><br>
-    <input class="login" type="password" name="contraseña" id="Contraseña" placeholder="Ingrese su Contraseña">
-    <br><br>
-    <form>
-        <a href="../pagprincipal/pagprincipal.html">
-            <input type="button" class="ingresar" onclick='return validar()' value="Ingresar">
-        </a>
-    </form>
-    <label for="">No tienes una cuenta?</label>
-    <a href="registrar.html">Registrarse</a>
-    <div id="error"></div>
-</section>
+</head>
+
+<body>
+    <main role="main">
+
+        <header>
+            <h1> LET'S TRAIN </h1>
+        </header>
+
+        <section class="form-login">
+            <div align="center"><img class="logo" src="~/Img/Inicio/logotipo.jpeg" alt="20"></div>
+            <br><br><br>
+            <input class="login" type="text" name="usuario" id="usuario" placeholder="Ingrese su Usuario">
+            <br><br>
+            <input class="login" type="password" name="contraseña" id="Contraseña" placeholder="Ingrese su Contraseña">
+            <br><br>
+            <form>
+                <a asp-page="/PagPrincipal/PagPrincipal">
+                    <input type="button" class="ingresar" onclick='return validar()' value="Ingresar">
+                </a>
+            </form>
+            <label for="">No tienes una cuenta?</label>
+            <a asp-page="/Inicio/Registrar">Registrarse</a>
+            <div id="error"></div>
+        </section>
+    </main>
+
+
+    @* <footer class="border-top footer text-muted">
+        <div class="container">
+        &copy; 2022 - GymEnCasa.App.Presentacion - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+        </footer> *@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Inicio/inicio.js"></script>
+
+</body>
