@@ -1,0 +1,25 @@
+body{
+    opacity: 100%;
+    background: #ebebbe;
+   
+}
+
+.titulo {
+    color: white;
+}
+
+.logo { 
+    border-radius: 20%;
+}
+a:hover{
+    opacity: 0.6;
+    box-shadow: 5px 5px 5px rgba(47, 152, 23, 0.941);
+}
+p{
+    font-weight: bold;
+}
+.p3{
+    color: #000;
+    font-size: 13px;
+    font-weight: bold;
+}
