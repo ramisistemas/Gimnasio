@@ -3,11 +3,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MyApp.Namespace
 {
-    public class RegistrarModel : PageModel
+    public class DificultadEjercicioModel : PageModel
     {
         public void OnGet()
         {
         }
-        
     }
 }
