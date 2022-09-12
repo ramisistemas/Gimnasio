@@ -1,0 +1,15 @@
+body {
+    background-image: url(../../img/rutinas/fondodificultadejercicio.png);
+    image-resolution: 400px; 
+}
+.containerp-5{
+    background-image: url(../../img/rutinas/fondodificultadejercicio.png);
+    image-resolution: 600px;
+}
+.logo { 
+    border-radius: 20%;
+}
+a:hover{
+    opacity: 0.6;
+    box-shadow: 5px 5px 5px rgba(201, 28, 8, 0.941);
+}
