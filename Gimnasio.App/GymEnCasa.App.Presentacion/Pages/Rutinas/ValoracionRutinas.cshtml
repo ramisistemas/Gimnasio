@@ -4,6 +4,7 @@
     ViewData["Title"] = "REGISTRAR";
     ViewData["Estilos"] = "~/css/Inicio/registrar.css";
 }
+
 <head>
     @{
         var Estilos = ViewData["Estilos"];
@@ -19,11 +20,11 @@
 <body>
     <header class="text-bg-dark">
         <nav class="navbar navbar-expand-lg bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand  px-2 text-white" href="../PagPrincipal/PagPrincipal">
-              <img class="logo" src="../../img/Rutinas/logotipo.jpeg" alt="" width="12%">
-              LET'S TRAIN
-            </a>
+            <div class="container-fluid">
+                <a class="navbar-brand  px-2 text-white" href="../PagPrincipal/PagPrincipal">
+                    <img class="logo" src="../../img/Rutinas/logotipo.jpeg" alt="" width="12%">
+                    LET'S TRAIN
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -31,7 +32,7 @@
                 </button>
                 <div class="ml-auto" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a href="DificultadEjercicio" class="btn btn-danger">FINALIZAR</a>
+                        <a href="../PagPrincipal/PagPrincipal" class="btn btn-danger">FINALIZAR</a>
                     </div>
                 </div>
             </div>
@@ -45,8 +46,8 @@
             <div class="row justify-content-md-center">
                 <div class="col-auto">
                     <div class="card" style="width: 18rem;">
-                        <a href="NivelBasico.html"><input type="image" src="../../img/rutinas/dificultad1.jpg" height="280" width="80"
-                            class="card-img-top" alt="..."></a>
+                        <a href="NivelBasico"><input type="image" src="../../img/rutinas/dificultad1.jpg"
+                                height="280" width="80" class="card-img-top" alt="..."></a>
                         <div class="card-body">
                             <input name="tCuerpo" type="checkbox" /> &nbsp; Basico
                         </div>
@@ -54,9 +55,8 @@
                 </div>
                 <div class="col-auto">
                     <div class="card" style="width: 18rem;">
-                        <a href="NivelIntermedio.html"><input type="image"
-                            src="../../img/rutinas/dificultad2.jpg" height="280" width="80"
-                            class="card-img-top" alt="..."></a>
+                        <a href="NivelIntermedio"><input type="image" src="../../img/rutinas/dificultad2.jpg"
+                                height="280" width="80" class="card-img-top" alt="..."></a>
                         <div class="card-body">
                             <input name="tCuerpo" type="checkbox" /> &nbsp; Intermedio
                         </div>
@@ -64,9 +64,8 @@
                 </div>
                 <div class="col-auto">
                     <div class="card" style="width: 18rem;">
-                        <a href="NivelAvanzado.html"><input type="image"
-                            src="../../img/rutinas/dificultad3.jpg" height="280" width="80"
-                            class="card-img-top" alt="..."></a>
+                        <a href="NivelAvanzado"><input type="image" src="../../img/rutinas/dificultad3.jpg"
+                                height="280" width="80" class="card-img-top" alt="..."></a>
                         <div class="card-body">
                             <input name="tCuerpo" type="checkbox" /> &nbsp; Avanzado
                         </div>
