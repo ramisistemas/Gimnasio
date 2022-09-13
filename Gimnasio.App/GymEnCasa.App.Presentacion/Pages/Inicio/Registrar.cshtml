@@ -4,9 +4,6 @@
     ViewData["Title"] = "REGISTRAR";
     ViewData["Estilos"] = "~/css/Inicio/registrar.css";
 }
-<div class="fondo">
-
-</div>
 
 <head>
     @{
@@ -70,12 +67,12 @@
             <input class="controls" type="password" name="Contraseña" id="Contraseña"
                 placeholder="Ingrese su Contraseña">
             <br><br>
-            <p type="checkbox">Estoy de acuerdo con <a href="/Inicio/TerminosyCondiciones">Terminos y Condiciones</a>
+            <p type="checkbox">Estoy de acuerdo con &nbsp;&nbsp; <a href="/Inicio/TerminosyCondiciones">Terminos y Condiciones</a>
             </p>
             <br>
             <input class="button" type="submit" onclick='return validar()' value="Registrar">
             <input class="button" type="submit" value="Cancelar">
-            <p><a asp-page="../Shared/index"> Ya Tengo Una Cuenta</a></p>
+            <p><a asp-page="/Shared/Index"> Ya Tengo Una Cuenta</a></p>
             <div id="error"></div>
             <script src="../js/script.js"></script>
         </section>
