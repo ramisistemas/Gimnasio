@@ -1,0 +1,18 @@
+.body {
+    background-image: url(../../img/nutricion/fondoconsejonutricional.jpg);
+    image-resolution: 400px;
+    }
+
+.containerp-5{
+    background-image: url(../../img/nutricion/fondoconsejonutricional.jpg);
+    image-resolution: 400px;
+
+}
+.logo { 
+    border-radius: 20%;
+}
+a:hover{
+    opacity: 0.6;
+    box-shadow: 5px 5px 5px rgba(236, 236, 4, 0.941);
+}
+
