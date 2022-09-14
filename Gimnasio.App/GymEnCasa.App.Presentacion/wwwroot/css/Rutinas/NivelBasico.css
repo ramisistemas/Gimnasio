@@ -1,0 +1,11 @@
+body {
+    background-image: url(../../img/rutinas/fondodifbasico.png);
+    image-resolution: 400px; 
+}
+.logo { 
+    border-radius: 20%;
+}
+a:hover{
+    opacity: 0.6;
+    box-shadow: 5px 5px 5px rgba(43, 144, 211, 0.941);
+}

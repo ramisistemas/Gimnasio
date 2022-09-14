@@ -1,0 +1,28 @@
+body {
+    background-image:radial-gradient(circle at 79.22% 100.62%, #ff9f52 0, #ff905f 8.33%, #ff806a 16.67%, #ff6f72 25%, #ff5e78 33.33%, #ff4d7a 41.67%, #f23c78 50%, #d42e74 58.33%, #b92371 66.67%, #a01d6e 75%, #8b1a6c 83.33%, #781a6a 91.67%, #671c6a 100%);
+}
+.logo { 
+    border-radius: 20%;
+}
+a:hover{
+    opacity: 0.6;
+    box-shadow: 5px 5px 5px rgba(230, 63, 41, 0.941);   
+}
+p{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.mt-3{
+    color: rgb(234, 240, 233);
+}
+.card-body{
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%; 
+}
+.datos{
+  margin: 30px;  
+  display: flex;
+  justify-content: center;
+  font-weight: bold; 
+}
