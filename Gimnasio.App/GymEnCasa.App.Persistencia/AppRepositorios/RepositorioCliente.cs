@@ -35,7 +35,7 @@ namespace GymEnCasa.App.Persistencia
                 clienteEncontrado.PrimerApellido=cliente.PrimerApellido;
                 clienteEncontrado.SegundoApellido=cliente.SegundoApellido;
                 clienteEncontrado.Email=cliente.Email;
-             // clienteEncontrado.Edad=cliente.Edad;
+                clienteEncontrado.Edad=cliente.Edad;
                 clienteEncontrado.NumeroTelefonico=cliente.NumeroTelefonico;
                 clienteEncontrado.Direccion=cliente.Direccion;
                 clienteEncontrado.Contrasena=cliente.Contrasena;
