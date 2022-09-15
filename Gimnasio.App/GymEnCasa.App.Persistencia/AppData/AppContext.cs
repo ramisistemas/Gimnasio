@@ -11,8 +11,7 @@ namespace GymEnCasa.App.Persistencia
         public DbSet<DificultadEjercicio> DificultadEjercicios {get;set;}
         public DbSet<RutinasEjercicio> RutinasEjercicios {get;set;}
         public DbSet<Historico> Historicos {get;set;}
-        public DbSet<TipoCuerpo> TipoCuerpos {get;set;} 
-        public DbSet<ValoracionInicial> ValoracionIniciales {get;set;} 
+        public DbSet<TipoCuerpo> TipoCuerpos {get;set;}
         public DbSet<CategoriaNutricional> CategoriaNutricionales {get;set;}
         public DbSet<ValoracionNutricionalCliente> ValoracionNutricionalClientes {get;set;}
         public DbSet<ValoracionRutinasCliente> ValoracionRutinasClientes {get;set;} 
