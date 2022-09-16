@@ -1,5 +1,5 @@
 ﻿@page
-@model MyApp.Namespace.RegistrarModel
+@model GymEnCasa.App.Presentacion.Pages.RegistrarModel
 @{
     ViewData["Title"] = "REGISTRAR";
     ViewData["Estilos"] = "~/css/Inicio/registrar.css";
@@ -15,68 +15,122 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Inicio/registrar.css">
-
 </head>
 
 <body>
     <main role="main">
         <section class="form-registro">
-            <div align="center"><img class="imagen1" src="~/img/Inicio/logotipo.jpeg" alt="20"></div>
-            <h1 style="color:rgb(46, 17, 45);">CREAR UNA CUENTA</h1>
-            <br>
-            <label for="">Primer Nombre:</label>
-            <br>
-            <input class="controls" type="text" name="nombre1" id="nombre1" placeholder="Ingrese su Primer Nombre">
-            <br><br>
-            <label for="">Segundo Nombre:</label>
-            <br>
-            <input class="controls" type="text" name="nombre2" id="nombre2" placeholder="Ingrese su Segundo Nombre">
-            <br><br>
-            <label for="">Primer Apellido:</label>
-            <br>
-            <input class="controls" type="text" name="apellido1" id="apellido1"
-                placeholder="Ingrese su Primer Apellido">
-            <br><br>
-            <label for="">Segundo Apellido:</label>
-            <br>
-            <input class="controls" type="text" name="apellido2" id="apellido2"
-                placeholder="Ingrese su Segundo Apellido">
-            <br><br>
-            <label for="">Correo Electronico:</label>
-            <br>
-            <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su E-mail">
-            <br><br>
-            <label for="">Edad (años):</label>
-            <br>
-            <input class="controls" type="number" name="Edad" id="Edad" placeholder="Ingrese su Edad">
-            <br><br>
-            <label for="">Telefono:</label>
-            <br>
-            <input class="controls" type="number" name="Telefono" id="Telefono" placeholder="Ingrese su Telefono">
-            <br><br>
-            <label for="">Direccion:</label>
-            <br>
-            <input class="controls" type="text" name="Direccion" id="Direccion" placeholder="Ingrese su Direccion">
-            <br><br>
-            <label for="">Usuario:</label>
-            <br>
-            <input class="controls" type="text" name="Usuario" id="Usuario" placeholder="Ingrese su Usuario">
-            <br><br>
-            <label for="">Contraseña:</label>
-            <br>
-            <input class="controls" type="password" name="Contraseña" id="Contraseña"
-                placeholder="Ingrese su Contraseña">
-            <br><br>
-            <p type="checkbox">Estoy de acuerdo con &nbsp;&nbsp; <a href="/Inicio/TerminosyCondiciones">Terminos y Condiciones</a>
-            </p>
-            <br>
-            <input class="button" type="submit" onclick='return validar()' value="Registrar">
-            <input class="button" type="submit" value="Cancelar">
-            <p><a asp-page="/Index"> Ya Tengo Una Cuenta</a></p>
-            <div id="error"></div>
-            <script src="../js/script.js"></script>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div align="center"><img class="imagen1" src="~/img/Inicio/logotipo.jpeg" alt="20"></div>
+                <h1 style="color:rgb(46, 17, 45);">CREAR UNA CUENTA</h1>
+                <br>
+            <form method="post">
+
+                <div class="form-group">
+                    <label for="">Primer Nombre:</label>
+                    <br>
+                    <input asp-for="Cliente.PrimerNombre" class="form-control" 
+                           placeholder="Ingrese su Primer Nombre">
+                    <span asp-validation-for="Cliente.PrimerNombre" class="text-danger"></span>
+                    <br><br>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="">Segundo Nombre:</label>
+                    <br>
+                    <input asp-for="Cliente.SegundoNombre" class="form-control" 
+                           placeholder="Ingrese su Segundo Nombre">
+                    <br><br>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="">Primer Apellido:</label>
+                    <br>
+                    <input asp-for="Cliente.PrimerApellido" class="form-control" 
+                           placeholder="Ingrese su Primer Apellido">
+                    <span asp-validation-for="Cliente.PrimerApellido" class="text-danger"></span>
+                    <br><br>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="">Segundo Apellido:</label>
+                    <br>
+                    <input asp-for="Cliente.SegundoApellido" class="form-control" 
+                           placeholder="Ingrese su Segundo Apellido">
+                    <span asp-validation-for="Cliente.SegundoApellido" class="text-danger"></span>
+                    <br><br>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="">Correo Electronico:</label>
+                    <br>
+                    <input asp-for="Cliente.Email" class="form-control" 
+                           placeholder="Ingrese su Correo Electronico">
+                    <span asp-validation-for="Cliente.Email" class="text-danger"></span>
+                    <br><br>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="">Edad (años):</label>
+                    <br>
+                    <input asp-for="Cliente.Edad" class="form-control" 
+                           placeholder="Ingrese su Edad">
+                    <span asp-validation-for="Cliente.Edad" class="text-danger"></span>
+                    <br><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Numero Telefonico:</label>
+                    <br>
+                    <input asp-for="Cliente.NumeroTelefonico" class="form-control" 
+                           placeholder="Ingrese su Numero Telefonico">
+                    <span asp-validation-for="Cliente.NumeroTelefonico" class="text-danger"></span>
+                    <br><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Direccion:</label>
+                    <br>
+                    <input asp-for="Cliente.Direccion" class="form-control" 
+                           placeholder="Ingrese su Direccion">
+                    <span asp-validation-for="Cliente.Direccion" class="text-danger"></span>
+                    <br><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Contraseña:</label>
+                    <br>
+                    <input asp-for="Cliente.Contrasena" class="form-control" type="password"
+                           placeholder="Ingrese contraseña">
+                    <span asp-validation-for="Cliente.Contrasena" class="text-danger"></span>
+                    <br><br>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Registrar" class="btn btn-success form-control">
+                </div>
+            </form>
+                <br>
+                <p type="checkbox">
+                    Quiero Leer Los &nbsp;&nbsp; <a href="/Inicio/TerminosyCondiciones">
+                        Terminos y
+                        Condiciones
+                    </a>
+                </p>
+                <div>
+                    <a asp-page="/Index" class="btn btn-warning form-control ">CANCELAR</a>
+                    <br>
+                    <p><a asp-page="/Index"> Ya Tengo Una Cuenta</a></p>
+                </div>
+
         </section>
     </main>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

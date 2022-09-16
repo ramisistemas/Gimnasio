@@ -7,26 +7,30 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
+#nullable disable
+
 namespace GymEnCasa.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220907090209_Inicial")]
-    partial class Inicial
+    [Migration("20220916061820_Modelos")]
+    partial class Modelos
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .UseIdentityColumns()
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.0");
+                .HasAnnotation("ProductVersion", "6.0.9")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("GymEnCasa.App.Dominio.CategoriaNutricional", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
@@ -41,8 +45,9 @@ namespace GymEnCasa.App.Persistencia.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Contrasena")
                         .IsRequired()
@@ -52,12 +57,13 @@ namespace GymEnCasa.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Edad")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("GeneroId")
-                        .HasColumnType("int");
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NumeroTelefonico")
                         .IsRequired()
@@ -81,8 +87,6 @@ namespace GymEnCasa.App.Persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("GeneroId");
-
                     b.ToTable("Clientes");
                 });
 
@@ -90,17 +94,18 @@ namespace GymEnCasa.App.Persistencia.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
-                    b.Property<int?>("CategoriaNutricionalId")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CategoriaNutricionalId")
                         .HasColumnType("int");
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("TipoCuerpoId")
+                    b.Property<int>("TipoCuerpoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -116,8 +121,9 @@ namespace GymEnCasa.App.Persistencia.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
@@ -132,8 +138,9 @@ namespace GymEnCasa.App.Persistencia.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
@@ -148,16 +155,17 @@ namespace GymEnCasa.App.Persistencia.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
-                    b.Property<int?>("ClienteId")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ClienteId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("RutinasEjercicioId")
+                    b.Property<int>("RutinasEjercicioId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -173,8 +181,9 @@ namespace GymEnCasa.App.Persistencia.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("AyudaMultimedia")
                         .IsRequired()
@@ -184,14 +193,14 @@ namespace GymEnCasa.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("DificultadEjercicioId")
+                    b.Property<int>("DificultadEjercicioId")
                         .HasColumnType("int");
 
                     b.Property<string>("NombreEjercicio")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ZonaTrabajoId")
+                    b.Property<int>("ZonaTrabajoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -207,8 +216,9 @@ namespace GymEnCasa.App.Persistencia.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
@@ -219,42 +229,18 @@ namespace GymEnCasa.App.Persistencia.Migrations
                     b.ToTable("TipoCuerpos");
                 });
 
-            modelBuilder.Entity("GymEnCasa.App.Dominio.ValoracionInicial", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("Altura")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("GeneroId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Peso")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("GeneroId");
-
-                    b.ToTable("ValoracionIniciales");
-                });
-
             modelBuilder.Entity("GymEnCasa.App.Dominio.ValoracionNutricionalCliente", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("ClienteId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TipoCuerpoId")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TipoCuerpoId")
                         .HasColumnType("int");
 
                     b.Property<float>("estatura")
@@ -276,13 +262,14 @@ namespace GymEnCasa.App.Persistencia.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("ClienteId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("DificultadEjercicioId")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DificultadEjercicioId")
                         .HasColumnType("int");
 
                     b.Property<float>("estatura")
@@ -304,8 +291,9 @@ namespace GymEnCasa.App.Persistencia.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
@@ -316,24 +304,19 @@ namespace GymEnCasa.App.Persistencia.Migrations
                     b.ToTable("ZonaTrabajos");
                 });
 
-            modelBuilder.Entity("GymEnCasa.App.Dominio.Cliente", b =>
-                {
-                    b.HasOne("GymEnCasa.App.Dominio.Genero", "Genero")
-                        .WithMany()
-                        .HasForeignKey("GeneroId");
-
-                    b.Navigation("Genero");
-                });
-
             modelBuilder.Entity("GymEnCasa.App.Dominio.ConsejoNutricional", b =>
                 {
                     b.HasOne("GymEnCasa.App.Dominio.CategoriaNutricional", "CategoriaNutricional")
                         .WithMany()
-                        .HasForeignKey("CategoriaNutricionalId");
+                        .HasForeignKey("CategoriaNutricionalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("GymEnCasa.App.Dominio.TipoCuerpo", "TipoCuerpo")
                         .WithMany()
-                        .HasForeignKey("TipoCuerpoId");
+                        .HasForeignKey("TipoCuerpoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("CategoriaNutricional");
 
@@ -344,11 +327,15 @@ namespace GymEnCasa.App.Persistencia.Migrations
                 {
                     b.HasOne("GymEnCasa.App.Dominio.Cliente", "Cliente")
                         .WithMany()
-                        .HasForeignKey("ClienteId");
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("GymEnCasa.App.Dominio.RutinasEjercicio", "RutinasEjercicio")
                         .WithMany()
-                        .HasForeignKey("RutinasEjercicioId");
+                        .HasForeignKey("RutinasEjercicioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Cliente");
 
@@ -359,35 +346,34 @@ namespace GymEnCasa.App.Persistencia.Migrations
                 {
                     b.HasOne("GymEnCasa.App.Dominio.DificultadEjercicio", "DificultadEjercicio")
                         .WithMany()
-                        .HasForeignKey("DificultadEjercicioId");
+                        .HasForeignKey("DificultadEjercicioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("GymEnCasa.App.Dominio.ZonaTrabajo", "ZonaTrabajo")
                         .WithMany()
-                        .HasForeignKey("ZonaTrabajoId");
+                        .HasForeignKey("ZonaTrabajoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("DificultadEjercicio");
 
                     b.Navigation("ZonaTrabajo");
                 });
 
-            modelBuilder.Entity("GymEnCasa.App.Dominio.ValoracionInicial", b =>
-                {
-                    b.HasOne("GymEnCasa.App.Dominio.Genero", "Genero")
-                        .WithMany()
-                        .HasForeignKey("GeneroId");
-
-                    b.Navigation("Genero");
-                });
-
             modelBuilder.Entity("GymEnCasa.App.Dominio.ValoracionNutricionalCliente", b =>
                 {
                     b.HasOne("GymEnCasa.App.Dominio.Cliente", "Cliente")
                         .WithMany()
-                        .HasForeignKey("ClienteId");
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("GymEnCasa.App.Dominio.TipoCuerpo", "TipoCuerpo")
                         .WithMany()
-                        .HasForeignKey("TipoCuerpoId");
+                        .HasForeignKey("TipoCuerpoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Cliente");
 
@@ -398,11 +384,15 @@ namespace GymEnCasa.App.Persistencia.Migrations
                 {
                     b.HasOne("GymEnCasa.App.Dominio.Cliente", "Cliente")
                         .WithMany()
-                        .HasForeignKey("ClienteId");
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("GymEnCasa.App.Dominio.DificultadEjercicio", "DificultadEjercicio")
                         .WithMany()
-                        .HasForeignKey("DificultadEjercicioId");
+                        .HasForeignKey("DificultadEjercicioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Cliente");
 

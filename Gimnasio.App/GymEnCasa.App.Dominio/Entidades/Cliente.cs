@@ -1,19 +1,30 @@
-using System;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace GymEnCasa.App.Dominio
 {
     public class Cliente
     {
         public int Id {get;set;}
-        public String PrimerNombre {get;set;}
-        public String SegundoNombre {get;set;}
-        public String PrimerApellido {get;set;}
-        public String SegundoApellido {get;set;}
-        public String Email {get;set;}
-        public String Edad {get;set;}
-        public String NumeroTelefonico {get;set;}
-        public String Direccion {get;set;}
-        public String Contrasena {get;set;}
-        public Genero Genero{get;set;}
+        
+        public string PrimerNombre {get;set;}
+
+        public string? SegundoNombre {get;set;}
+
+        public string PrimerApellido {get;set;}
+
+        public string SegundoApellido {get;set;}
+        [Required]
+        public string Email {get;set;}
+
+        public string Edad {get;set;}
+
+        public string NumeroTelefonico {get;set;}
+
+        public string Direccion {get;set;}
+
+        public string Contrasena {get;set;}
+
+        //public Genero Genero{get;set;}
     }
 }

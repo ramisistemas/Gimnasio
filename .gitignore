@@ -15,3 +15,8 @@ Gimnasio.App/.vs/
 
 
 
+/.vs/VSWorkspaceState.json
+*.suo
+*.lock
+*.vsidx
+*.config

@@ -23,4 +23,8 @@
     <ProjectReference Include="..\GymEnCasa.App.Dominio\GymEnCasa.App.Dominio.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

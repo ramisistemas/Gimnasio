@@ -7,18 +7,15 @@ namespace GymEnCasa.App.Persistencia
 {
     public class RepositorioCliente:IRepositorioCliente
     {
-        private readonly AppContext _appContext;
-        public RepositorioCliente(AppContext appContext)
-        {
-            this._appContext=appContext;
-        }
+        private readonly AppContext _appContext = new AppContext();
+      
         public Cliente CrearCliente(Cliente cliente)
         {
             var clienteEncontrado=_appContext.Clientes.Add(cliente);
             _appContext.SaveChanges();
             return clienteEncontrado.Entity;
         }
-        public Cliente ConsultatCliente(int idCliente)
+        public Cliente ConsultarCliente(int idCliente)
         {
            return _appContext.Clientes.FirstOrDefault(p=>p.Id==idCliente);
         }

@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GymEnCasa.App.Dominio\GymEnCasa.App.Dominio.csproj" />
+    <ProjectReference Include="..\GymEnCasa.App.Persistencia\GymEnCasa.App.Persistencia.csproj" />
+  </ItemGroup>
+
 </Project>
