@@ -9,7 +9,7 @@ namespace GymEnCasa.App.Dominio
         
         public string PrimerNombre {get;set;}
 
-        public string? SegundoNombre {get;set;}
+        public string SegundoNombre {get;set;}
 
         public string PrimerApellido {get;set;}
 
