@@ -1,7 +1,7 @@
 using GymEnCasa.App.Dominio;
 using System.Linq;
 using System.Collections.Generic;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace GymEnCasa.App.Persistencia
 {
@@ -17,7 +17,7 @@ namespace GymEnCasa.App.Persistencia
         }
         public Cliente ConsultarCliente(int idCliente)
         {
-           return _appContext.Clientes.FirstOrDefault(p=>p.Id==idCliente);
+           return _appContext.Clientes.Include(cliente => cliente.Genero).FirstOrDefault(p => p.Id == idCliente);
         }
         public IEnumerable<Cliente> ConsultarClientes()
         {
