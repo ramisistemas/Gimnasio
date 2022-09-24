@@ -11,13 +11,14 @@ namespace GymEnCasa.App.Persistencia
       
         public Cliente CrearCliente(Cliente cliente)
         {
+            _appContext.Attach(cliente.Genero);
             var clienteEncontrado=_appContext.Clientes.Add(cliente);
             _appContext.SaveChanges();
             return clienteEncontrado.Entity;
         }
         public Cliente ConsultarCliente(int idCliente)
         {
-           return _appContext.Clientes.Include(cliente => cliente.Genero).FirstOrDefault(p => p.Id == idCliente);
+            return _appContext.Clientes.Include(cliente => cliente.Genero).FirstOrDefault(p => p.Id == idCliente);
         }
         public IEnumerable<Cliente> ConsultarClientes()
         {
@@ -49,5 +50,15 @@ namespace GymEnCasa.App.Persistencia
             _appContext.Clientes.Remove(clienteEncontrado);
             _appContext.SaveChanges();
         }
+        public List<Genero> BuscarGeneros()
+        {
+            return (from generos in _appContext.Generos
+                    select generos).ToList();
+        }
+
+        public Genero BuscarGeneros(int IdGenero)
+        {
+            return _appContext.Generos.FirstOrDefault(p=>p.Id==IdGenero);
+        }
     }
- }
+}

@@ -10,5 +10,7 @@ namespace GymEnCasa.App.Persistencia
         IEnumerable<Cliente> ConsultarClientes();
         Cliente ActualizarCliente(Cliente cliente);
         void EliminarCliente(int idCliente);
+        List<Genero> BuscarGeneros();
+        Genero BuscarGeneros(int IdGenero);
     }
 }
