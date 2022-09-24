@@ -25,6 +25,6 @@ namespace GymEnCasa.App.Dominio
 
         public string Contrasena {get;set;}
 
-        //public Genero Genero{get;set;}
+        public Genero? Genero{get;set;}
     }
 }
