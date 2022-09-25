@@ -2,6 +2,7 @@ using GymEnCasa.App.Dominio;
 using System.Collections.Generic;
 
 namespace GymEnCasa.App.Persistencia
+
 {
     public interface IRepositorioValoracionRutinasCliente
     {

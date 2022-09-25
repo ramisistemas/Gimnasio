@@ -6,13 +6,12 @@ namespace GymEnCasa.App.Persistencia
 {
     public class RepositorioValoracionRutinasCliente:IRepositorioValoracionRutinasCliente
     {
-        private readonly AppContext _appContext;
-         public RepositorioValoracionRutinasCliente(AppContext appContext)
-        {
-           this._appContext= appContext;
-        }
+        private readonly AppContext _appContext=new AppContext();
+         
         public ValoracionRutinasCliente CrearRutina(ValoracionRutinasCliente rutina)
         {
+            _appContext.Attach(rutina.Cliente);
+            _appContext.Attach(rutina.DificultadEjercicio);
             var rutinaAdicionada = _appContext.ValoracionRutinasClientes.Add(rutina);
             _appContext.SaveChanges();
             return rutinaAdicionada.Entity;

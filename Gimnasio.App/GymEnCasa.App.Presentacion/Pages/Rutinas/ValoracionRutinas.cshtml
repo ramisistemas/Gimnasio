@@ -1,5 +1,5 @@
 ﻿@page
-@model MyApp.Namespace.ValoracionRutinasModel
+@model             ValoracionRutinasModel
 @{
     ViewData["Title"] = "VALORACION R";
     ViewData["Estilos"] = "~";
@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <script src="../../js/Valoracionrutina/checkbox.js"></script>
+    
     <header class="text-bg-dark">
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
@@ -27,16 +27,18 @@
                     <img class="logo" src="../../img/Rutinas/logotipo.jpeg" alt="" width="12%">
                     LET'S TRAIN
                 </a>
-                @* <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="ml-auto" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a href="RutinasUsuario" class="btn btn-danger">FINALIZAR</a>
+                        <input type="submit" form="ValoracionRutinas" value="FINALIZAR" class="btn btn-danger form-control">
                     </div>
-                </div> *@
+                </div> 
+
             </div>
         </nav>
     </header>
@@ -44,64 +46,65 @@
         <div class="containerp-5">
             <div class="mt-3">
                 <h1 class="text-center" style="font-family:'optima'">En Cual Nivel Te Encuentras</h1>
-            </div>
+            </div>                  
+                           
 
-            <form method="post">
-
+            <form method="post" id="ValoracionRutinas">
 
                 <div class="row justify-content-md-center">
                     <div class="col-auto">
                         <div class="card" style="width: 18rem;">
-                            <a href="NivelBasico"><input type="image" src="../../img/rutinas/dificultad1.jpg"
-                                    height="280" width="80" class="card-img-top" alt="..."></a>
+                            <a href="NivelBasico">
+                                <input type="image" src="../../img/rutinas/dificultad1.jpg"
+                                       height="280" width="80" class="card-img-top" alt="...">
+                            </a>
                             <div class="card-body">
-                                <input type="checkbox" id="basico" onclick="uncheck()" name="basico"> Basico<br>
+                                <input asp-for="DificultadBasico" type="checkbox" id="basico" name="DificultadBasico"> Basico<br>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-auto">
                         <div class="card" style="width: 18rem;">
-                            <a href="NivelIntermedio"><input type="image" src="../../img/rutinas/dificultad2.jpg"
-                                    height="280" width="80" class="card-img-top" alt="..."></a>
+                            <a href="NivelIntermedio">
+                                <input type="image" src="../../img/rutinas/dificultad2.jpg"
+                                       height="280" width="80" class="card-img-top" alt="...">
+                            </a>
                             <div class="card-body">
-                                <input type="checkbox" id="intermedio" onclick="uncheck()" name="intermedio">
-                                Intermedio<br>
+                                <input asp-for="DificultadIntermedio" type="checkbox" id="intermedio" name="DificultadIntermedio"> Intermedio<br>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-auto">
                         <div class="card" style="width: 18rem;">
-                            <a href="NivelAvanzado"><input type="image" src="../../img/rutinas/dificultad3.jpg"
-                                    height="280" width="80" class="card-img-top" alt="..."></a>
+                            <a href="NivelAvanzado">
+                                <input type="image" src="../../img/rutinas/dificultad3.jpg"
+                                       height="280" width="80" class="card-img-top" alt="...">
+                            </a>
                             <div class="card-body">
-                                <input type="checkbox" id="avanzado" onclick="uncheck()" name="avanzado"> Avanzado<br>
+                                <input asp-for="DificultadAvanzado" type="checkbox" id="avanzado" name="DificultadAvanzado"> Avanzado<br>                                
                             </div>
                         </div>
                     </div>
 
-                    <div class="datos">
-                        <br>
-                        <div class="dtos">
-                            <label for="">Cuanto Mides ? (Cm)</label>&nbsp;
-                            <input class="controls" type="text" name="altura" id="altura" placeholder="Estatura en Cm">
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <label for="">Cuanto Pesas ? (Kg)</label>&nbsp;
-                            <input class="controls" type="text" name="peso" id="peso" placeholder="Peso en Kg">
-                        </div>
-                    </div>
 
-                    <div class="form-group">
-                        <div class="row">
-                           <option></option>
-                            <div class="col-sm-2 offset-sm-9" >
-                            <input type="submit" value="Finalizar" class="btn btn-success form-control" formaction="/Rutinas/RutinasUsuario">                          
-                        </div>
-                    </div>
                 </div>
 
+                <div class="datos">
+                    <br>
+                    <div class="dtos">
+                        <label for="">Cuanto Mides ? (Cm)</label>&nbsp;
+                        <input asp-for="valoracionRutinasCliente.estatura" class="controls" class="datos" placeholder="Estatura en Cm">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="">Cuanto Pesas ? (Kg)</label>&nbsp;
+                        <input asp-for="valoracionRutinasCliente.peso" class="controls" class="datos" placeholder="Peso en Kg">                        
+                    </div>
+                </div>                               
+
             </form>
+
+
 
         </div>
     </main>
@@ -117,8 +120,6 @@
     </footer>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
-
-        </script>
-
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="../../js/Valoracionrutina/checkbox.js"></script>
 </body>
