@@ -6,11 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
 builder.Services.AddSingleton<IRepositorioCliente, RepositorioCliente>();
 builder.Services.AddSingleton<IRepositorioValoracionNutricional,RepositorioValoracionNutricional>();
 builder.Services.AddSingleton<IRepositorioTipoCuerpo, RepositorioTipoCuerpo>();
 builder.Services.AddSingleton<IRepositorioValoracionRutinasCliente, RepositorioValoracionRutinasCliente>();
 builder.Services.AddSingleton<IRepositorioDificultadEjercicio, RepositorioDificultadEjercicio>();
+
 
 var app = builder.Build();
 
