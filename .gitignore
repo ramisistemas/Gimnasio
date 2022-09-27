@@ -20,3 +20,4 @@ Gimnasio.App/.vs/
 *.lock
 *.vsidx
 *.config
+/Gimnasio.App/GymEnCasa.App.Persistencia/Migrations
