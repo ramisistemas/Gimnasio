@@ -2,13 +2,10 @@
 @model GymEnCasa.App.Presentacion.Pages.RegistrarModel
 @{
     ViewData["Title"] = "REGISTRAR";
-    ViewData["Estilos"] = "~/css/Inicio/registrar.css";
+   
 }
 
 <head>
-    @{
-        var Estilos = ViewData["Estilos"];
-    }
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - LET'S TRAIN</title>
@@ -111,6 +108,21 @@
                     <br><br>
                 </div>
 
+               <div class="form-group" >
+                   <label for="">Genero:</label>
+                    <br>
+                    <select asp-for="IdGenero" class="form-control">
+                        <option value=""> ...Seleccione su Genero...</option>
+                        @foreach (var Gen in Model.Generos)
+                        {
+                             <option value="@Gen.Id">@Gen.Descripcion</option>
+                        }
+                    </select>
+                    <br><br>
+                </div>
+
+                     
+
                 <div class="form-group">
                     <input type="submit" value="Registrar" class="btn btn-success form-control">
                 </div>
@@ -124,8 +136,6 @@
                 </p>
                 <div>
                     <a asp-page="/Index" class="btn btn-warning form-control ">CANCELAR</a>
-                    <br>
-                    <p><a asp-page="/Index"> Ya Tengo Una Cuenta</a></p>
                 </div>
 
         </section>

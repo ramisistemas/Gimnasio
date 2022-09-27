@@ -53,7 +53,7 @@
                                 Mi cuerpo esdelgado, con poca grasa y poco músculo. Dificilmente puedo ganar peso o musculo.
                             </p>
                             <div class="card-body">
-                                <input asp-for="EctomorfoTipo" name="EctomorfoTipo" type="checkbox" id="chkEctomorfo" /> &nbsp; Ectomorfo
+                                <input asp-for="EctomorfoTipo" name="EctomorfoTipo" type="checkbox" id="chkEctomorfo"/> &nbsp; Ectomorfo
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,6 @@
                         <br>
                         <div class="form-group">
                             <label for="">Cuanto Mides ? (Cm)</label>&nbsp;
-
                             <input asp-for="Valoracion.estatura" class="controls" name="Valoracion.estatura" id="altura" placeholder="Estatura en Cm">
                             &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -115,6 +114,7 @@
                     <p class="text-danger text-center"><bold>@Model.CheckBoxValidation</bold></p>
                 </div>
             </form>
+        </div>
         </div>
     </main>
     <footer class="mt-5 p-5 bg-dark">

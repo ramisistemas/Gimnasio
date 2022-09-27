@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace MyApp.Namespace
 {
     public class ValoracionNutricionalModel : PageModel
@@ -12,12 +13,15 @@ namespace MyApp.Namespace
         private readonly IRepositorioValoracionNutricional _valoracionNutricional;
         private readonly IRepositorioCliente _repositorioCliente;
         private readonly IRepositorioTipoCuerpo _tipoCuerpo;
-
-
+        
         private int idUsuarioLogeado = 1;
 
         [BindProperty]
         public string? CheckBoxValidation { get; set; }
+        
+        [BindProperty]
+        private int idUsuarioLogeado = 1;
+
         [BindProperty]
         public ValoracionNutricionalCliente Valoracion { get; set; }
         [BindProperty]
@@ -28,6 +32,7 @@ namespace MyApp.Namespace
         public bool EndomorfoTipo { get; set; }
 
         public ValoracionNutricionalModel(IRepositorioValoracionNutricional valoracionNutricional, IRepositorioCliente repositorioCliente, IRepositorioTipoCuerpo tipoCuerpo)
+        public ValoracionNutricionalModel(IRepositorioValoracionNutricional valoracionNutricional,IRepositorioCliente repositorioCliente,IRepositorioTipoCuerpo tipoCuerpo)
         {
             this._valoracionNutricional = valoracionNutricional;
             this._repositorioCliente = repositorioCliente;
@@ -59,7 +64,7 @@ namespace MyApp.Namespace
 
             Valoracion.Cliente = cliente;
             Valoracion.TipoCuerpo = tipoCuerpo;
-
+           
             _valoracionNutricional.CrearValoracionNutricional(Valoracion);
 
             return Redirect("/Nutricion/ConsejoNutricional");
