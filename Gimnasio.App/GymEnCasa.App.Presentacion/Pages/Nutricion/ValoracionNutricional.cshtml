@@ -1,14 +1,7 @@
 ﻿@page
 @model MyApp.Namespace.ValoracionNutricionalModel
-@{
-    ViewData["Title"] = "";
-    ViewData["Estilos"] = "~";
-}
 
 <head>
-    @{
-        var Estilos = ViewData["Estilos"];
-    }
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -26,13 +19,13 @@
                     LET'S TRAIN
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="ml-auto" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a href="DefinirCuerpo" class="btn btn-info">FINALIZAR</a>
+                        <input type="submit" form="prueba" value="FINALIZAR" class="btn btn-info" />
                     </div>
                 </div>
             </div>
@@ -42,84 +35,102 @@
         <div class="containerp-5">
             <div class="mt-3">
                 <h1 class="text-center" style="font-family:'optima'">Elije Tu Tipo De Cuerpo</h1>
-                <h2 class="text-center" style="font-family:'optima'">Escoge el tipo de cuerpo mas parecido al tuyo, no
-                    es que hayan cuerpos buenos o malos, solo es para guiarnos</h2>
+                <h2 class="text-center" style="font-family:'optima'">
+                    Escoge el tipo de cuerpo mas parecido al tuyo, no
+                    es que hayan cuerpos buenos o malos, solo es para guiarnos
+                </h2>
             </div>
-            <div class="row justify-content-md-center">
-                <div class="col-auto">
-                    <div class="card" style="width: 18rem;">
-                        <a href="#"><input type="image" src="../../img/Nutricion/Ectomorfo.png" height="280" width="80"
-                                class="card-img-top" alt="..."></a>
-                        <p>
-                            Mi cuerpo esdelgado, con poca grasa y poco músculo. Dificilmente puedo ganar peso o musculo.
-                        </p>
-                        <div class="card-body">
-                            <input name="tCuerpo" type="checkbox" /> &nbsp; Ectomorfo
+
+            <form method="post" id="prueba">
+                <div class="row justify-content-md-center">
+                    <div class="col-auto">
+                        <div class="card" style="width: 18rem;">
+                            <a href="#">
+                                <input type="image" src="../../img/Nutricion/Ectomorfo.png" height="280" width="80"
+                                       class="card-img-top" alt="...">
+                            </a>
+                            <p>
+                                Mi cuerpo esdelgado, con poca grasa y poco músculo. Dificilmente puedo ganar peso o musculo.
+                            </p>
+                            <div class="card-body">
+                                <input asp-for="EctomorfoTipo" name="EctomorfoTipo" type="checkbox" id="chkEctomorfo" /> &nbsp; Ectomorfo
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-auto">
-                    <div class="card" style="width: 18rem;">
-                        <a href="#"><input type="image" src="../../img/Nutricion/Mesomorfo.png" height="280" width="80"
-                                class="card-img-top" alt="..."></a>
-                        <p>
-                            Mi cuerpo luce atlético y musculoso, normalmente puedo ganar o perder peso fácilmente.
-                        </p>
-                        <div class="card-body">
-                            <input name="tCuerpo" type="checkbox" /> &nbsp; Mesomorfo
+                    <div class="col-auto">
+                        <div class="card" style="width: 18rem;">
+                            <a href="#">
+                                <input type="image" src="../../img/Nutricion/Mesomorfo.png" height="280" width="80"
+                                       class="card-img-top" alt="...">
+                            </a>
+                            <p>
+                                Mi cuerpo luce atlético y musculoso, normalmente puedo ganar o perder peso fácilmente.
+                            </p>
+                            <div class="card-body">
+                                <input asp-for="MesomorfoTipo" name="MesomorfoTipo" type="checkbox" id="chkMesomorfo" /> &nbsp; Mesomorfo
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-auto">
-                    <div class="card" style="width: 18rem;">
-                        <a href="#"><input type="image" src="../../img/Nutricion/Endomorfo.png" height="280" width="80"
-                                class="card-img-top" alt="..."></a>
-                        <p>
-                            Poseo mucha grasa y músculo, mi forma corporal luce más redonda y suelo Ganan peso
-                            fácilmente.
-                        </p>
-                        <div class="card-body">
-                            <input name="tCuerpo" type="checkbox" /> &nbsp; Endomorfo
+                    <div class="col-auto">
+                        <div class="card" style="width: 18rem;">
+                            <a href="#">
+                                <input type="image" src="../../img/Nutricion/Endomorfo.png" height="280" width="80"
+                                       class="card-img-top" alt="...">
+                            </a>
+                            <p>
+                                Poseo mucha grasa y músculo, mi forma corporal luce más redonda y suelo Ganan peso
+                                fácilmente.
+                            </p>
+                            <div class="card-body">
+                                <input asp-for="EndomorfoTipo" name="EndomorfoTipo" type="checkbox" id="chkEndomorfo" /> &nbsp; Endomorfo
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-auto">
-                    <div class="card" style="width: 18rem;">
-                        <a href="#"><input type="image" src="../../img/Nutricion/testtipocuerpo.png" height="280"
-                                width="80" class="card-img-top" alt="..."></a>
-                        <p>
-                            Toma tu muñeca entrelaza el dedo pulgar y el dedo indice
-                        <p>
-                        <div class="card-body">
-                            <h4 class="card-title text-center">TEST</h4>
+                    <div class="col-auto">
+                        <div class="card" style="width: 18rem;">
+                            <a href="#">
+                                <input type="image" src="../../img/Nutricion/testtipocuerpo.png" height="280"
+                                       width="80" class="card-img-top" alt="...">
+                            </a>
+                            <p>
+                                Toma tu muñeca entrelaza el dedo pulgar y el dedo indice
+                            <p>
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">TEST</h4>
+                                </div>
                         </div>
                     </div>
-                </div>
-                <div class="datos">
-                    <br>
-                    <div class="dtos">
-                        <label for="">Cuanto Mides ? (Cm)</label>&nbsp;
-                        <input class="controls" type="text" name="altura" id="altura" placeholder="Estatura en Cm">
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <label for="">Cuanto Pesas ? (Kg)</label>&nbsp;
-                        <input class="controls" type="text" name="peso" id="peso" placeholder="Peso en Kg">
+                    <div class="datos">
+                        <br>
+                        <div class="form-group">
+                            <label for="">Cuanto Mides ? (Cm)</label>&nbsp;
+
+                            <input asp-for="Valoracion.estatura" class="controls" name="Valoracion.estatura" id="altura" placeholder="Estatura en Cm">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <label for="">Cuanto Pesas ? (Kg)</label>&nbsp;
+                            <input asp-for="Valoracion.peso" class="controls" name="Valoracion.peso" id="peso" placeholder="Peso en Kg">
+                        </div>
                     </div>
+                    <p class="text-danger text-center"><bold>@Model.CheckBoxValidation</bold></p>
                 </div>
-            </div>
+            </form>
         </div>
     </main>
     <footer class="mt-5 p-5 bg-dark">
-        <!-- <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-        </ul> -->
+        @*<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>*@
         <p class="text-center text-muted">© Gimnasio Mintic</p>
     </footer>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+    <script src="~/js/Inicio/ValoracionRutinas.js" type="text/javascript"></script>
+
 </body>
