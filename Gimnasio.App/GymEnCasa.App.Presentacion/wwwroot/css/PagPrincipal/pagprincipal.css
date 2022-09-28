@@ -23,3 +23,7 @@ p{
     font-size: 13px;
     font-weight: bold;
 }
+.carousel-control-next, .carousel-control-prev {
+    top: 72px;
+    bottom: 72px;
+}
