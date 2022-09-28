@@ -1,0 +1,27 @@
+﻿@page
+@model MyApp.Namespace.RutinasConsejosNutricionalesModel
+@{
+    var tituloVentanaTab = "";
+    ViewData["Title"] = tituloVentanaTab;
+    var titulo = "";
+    var descripcion = "";
+    var rutaContenidoMultimedia = "";
+}
+
+<div class="row">
+    <div class="col-sm justify-content-center align-items-center">
+        <img src=@rutaContenidoMultimedia alt="">
+    </div>
+    <div class="col-lg m-3">
+        <h1>@titulo</h1>
+        <p style="text-align: justify;">@descripcion</p>
+        <div class="row text-center m-3">
+            <div class="col-sm">
+                <button type="button" class="btn btn-primary">Realizado <i class="bi bi-check"></i></button>
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-warning">Siguiente <i class="bi bi-arrow-right-short"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
