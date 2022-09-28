@@ -1,5 +1,5 @@
 ﻿@page
-@model             ValoracionRutinasModel
+@model  ValoracionRutinasModel
 @{
     ViewData["Title"] = "VALORACION R";
     ViewData["Estilos"] = "~";
@@ -51,6 +51,8 @@
 
             <form method="post" id="ValoracionRutinas">
 
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>              
+
                 <div class="row justify-content-md-center">
                     <div class="col-auto">
                         <div class="card" style="width: 18rem;">
@@ -59,7 +61,7 @@
                                        height="280" width="80" class="card-img-top" alt="...">
                             </a>
                             <div class="card-body">
-                                <input asp-for="DificultadBasico" type="checkbox" id="basico" name="DificultadBasico"> Basico<br>
+                                <input asp-for="DificultadBasico" type="checkbox" id="basico" name="DificultadBasico"> Basico<br>                                
                             </div>
                         </div>
                     </div>
@@ -71,7 +73,7 @@
                                        height="280" width="80" class="card-img-top" alt="...">
                             </a>
                             <div class="card-body">
-                                <input asp-for="DificultadIntermedio" type="checkbox" id="intermedio" name="DificultadIntermedio"> Intermedio<br>
+                                <input asp-for="DificultadIntermedio" type="checkbox" id="intermedio" name="DificultadIntermedio"> Intermedio<br>                                
                             </div>
                         </div>
                     </div>
@@ -83,7 +85,7 @@
                                        height="280" width="80" class="card-img-top" alt="...">
                             </a>
                             <div class="card-body">
-                                <input asp-for="DificultadAvanzado" type="checkbox" id="avanzado" name="DificultadAvanzado"> Avanzado<br>                                
+                                <input asp-for="DificultadAvanzado" type="checkbox" id="avanzado" name="DificultadAvanzado"> Avanzado<br>                                                                
                             </div>
                         </div>
                     </div>
@@ -97,8 +99,11 @@
                         <label for="">Cuanto Mides ? (Cm)</label>&nbsp;
                         <input asp-for="valoracionRutinasCliente.estatura" class="controls" class="datos" placeholder="Estatura en Cm">
                         &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span asp-validation-for="valoracionRutinasCliente.estatura" class="text-warning"></span>
                         <label for="">Cuanto Pesas ? (Kg)</label>&nbsp;
-                        <input asp-for="valoracionRutinasCliente.peso" class="controls" class="datos" placeholder="Peso en Kg">                        
+                        <input asp-for="valoracionRutinasCliente.peso" class="controls" class="datos" placeholder="Peso en Kg">
+                        <span asp-validation-for="valoracionRutinasCliente.peso" class="text-warning"></span>
+                                                
                     </div>
                 </div>                               
 
