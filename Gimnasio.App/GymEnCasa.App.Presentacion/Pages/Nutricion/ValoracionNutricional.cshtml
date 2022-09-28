@@ -25,7 +25,9 @@
                 </button>
                 <div class="ml-auto" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
+
                         <input type="submit" form="prueba" value="FINALIZAR" class="btn btn-info" />
+
                     </div>
                 </div>
             </div>
@@ -102,17 +104,14 @@
                     </div>
                     <div class="datos">
                         <br>
-                        <div class="form-group">
+                        <div class="dtos">
                             <label for="">Cuanto Mides ? (Cm)</label>&nbsp;
-                            <input asp-for="Valoracion.estatura" class="controls" name="Valoracion.estatura" id="altura" placeholder="Estatura en Cm">
+                            <input asp-for="Valoracion.estatura" class="controls" name="estatura" id="altura" placeholder="Estatura en Cm">
                             &nbsp;&nbsp;&nbsp;&nbsp;
-
                             <label for="">Cuanto Pesas ? (Kg)</label>&nbsp;
-                            <input asp-for="Valoracion.peso" class="controls" name="Valoracion.peso" id="peso" placeholder="Peso en Kg">
+                            <input asp-for="Valoracion.peso" class="controls" name="peso" id="peso" placeholder="Peso en Kg">
                         </div>
                     </div>
-                    <p class="text-danger text-center"><bold>@Model.CheckBoxValidation</bold></p>
-                </div>
             </form>
         </div>
         </div>
